@@ -1,7 +1,7 @@
 README for StructInfCounter
 
 How to run?
-1. Download and unzip the source code in Linux;
+1. Download source code in Linux;
 2. "cd" to the source directory, and execute "make"; an executable file "structinf" will be built under the directory;
 3. (1) To run the demo on sythesized dataset:
       a) download sythesized dataset "testdata.zip" and unpack into the current directory;
