@@ -4,14 +4,10 @@ How to run?
 1. Download source code in Linux;
 2. "cd" to the source directory, and execute "make"; an executable file "structinf" will be built under the directory;
 3. (1) To run the demo on sythesized dataset:
-      a) download sythesized dataset "testdata.zip" and unpack into the current directory;
+      a) download sythesized folder "testdata";
 	     Note: test graph is an Erdos-Renyi random graph of 1000 nodes & 15196 directed edges;
       b) execute "./structinf testdata/graph.txt testdata/logs.txt . /3,1,1,1/";
       c) a result file "runlog_" will be created under the current directory, containing the exact numbers of active & inactive influence patterns and influence probabilities. (an example output file is provided under "testdata/".)
-   (2) To run the demo on weibo dataset:
-      a) download weibo dataset "weibodata.zip" and unpack into the current directory;
-      b) execute "./structinf weibodata/graph.txt weibodata/logs.txt . /90000,0.6,0.1,0.9/" (10 million lines of logs in total, approximately taking 1.5 hour on normal Intel CPU);
-      c) a result file "runlog_" will be created under the current directory, containing sampling results and estimated influence probabilities.
    (3) To specify parameters and run on your own dataset:
       a) enter "./structinf" to see usage:
 		   "./structinf GRAPH_FILE LOG_FILE OUT_DIR /tau1,px1,py1,q1/*times1,/tau2,px2,py2,q2/*times2,...
@@ -25,9 +21,9 @@ How to run?
              uid2 aid2 t2
              ...
         3) OUT_DIR - output directory, e.g. ".", "result", etc
-        4) /tau1,px1,py1,q1/*times1 - run the algorithm with parameter 'tau1,px1,py1,q1' for 'times1' times;
-           Note: px and py can be 0, meaning not counting X or Y; times can be omitted.
+        4) /tau1,px1,py1,q1/*times1 - run the algorithm with parameters 'tau1,px1,py1,q1' for 'times1' times;
+           Note: px or py can be 0, indicating not counting X or Y; times can be omitted.
       b) run the program with appropriate parameters;
-	  c) the results are printed every 100000 logs, consisting of 5 columns if px,py>0 (2 columns if either px or py = 0) and 20 rows:
-	           raw X  estimated X	raw Y      estimated Y  estimated inf_prob
-        Pt 01: 12970	40031     ,	879599    	97733222  ,	0.000409
+      c) the results are printed every 100000 logs, consisting of 5 columns if px,py>0 (2 columns if either px or py = 0) and 20 rows:
+	         raw X  estimated X	raw Y      estimated Y  estimated inf_prob
+        
