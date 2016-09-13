@@ -21,7 +21,8 @@ How to run?
              uid2 aid2 t2
              ...
         3) OUT_DIR - output directory, e.g. ".", "result", etc
-        4) /tau1,px1,py1,q1/*times1 - run the algorithm with parameters 'tau1,px1,py1,q1' for 'times1' times;
+        4) /tau1,px1,py1,q1/*times1 - repeat the algorithm with parameters 'tau1,px1,py1,q1' for 'times1' times, "*" means run repeatedly;
+           /tau1,px1,py1,q1/*times1,/tau2,px2,py2,q2/*times2 -  repeat the algorithm with parameters 'tau1,px1,py1,q1' for 'times1' times, and then repeat with parameters 'tau2,px2,py2,q2' for 'times2' times
            Note: px or py can be 0, indicating not counting X or Y; times can be omitted.
       b) run the program with appropriate parameters;
       c) the results are printed every 100000 logs, consisting of 5 columns if px,py>0 (2 columns if either px or py = 0) and 20 rows:
